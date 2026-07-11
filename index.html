@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231- Web Frontend Development I</title>
+    <title>WDD 231 | Web Frontend I | Osimiri Ebube</title>
+    <meta name="description" content="This page is dedicated to learning how to build dynamic websites using HTML, CSS, JavaScript, JSON, API, and UX design techniques. The final website in this repository was created during the WDD 231 classes. ">
+    <meta name="author" content="Osimiri Ebube">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta property="og:url" content="https://Ecorujoe.github.io/wdd231/">
+    <meta property="og:title" content="WDD 231 Web Frontend I Osimiri Ebube">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.pexels.com/photo/people-gathered-in-front-of-toronto-freestanding-signage-1750754/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/filtered-courses.js"></script>
 </head>
 <body>
-    <h1>WDD231- Web Frontend Development I</h1>
+    <header>
+        <!-- HEADER | NAVIGATION -->
+        <div class="header">
+            <div class="image-profile">
+                <img src="images/profile_photo.jpeg" alt="Osimiri Ebube profile photo" width="150">
+            </div>
+            <h1>Ebubechukwu Joel <br>Osimiri</h1>
+            <!-- Hamburger menu button -->
+            <button id="menubutton"></button>
+        </div>
+        
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="https://Ecorujoe.github.io/wdd231/" class="active-menu-link">Home</a></li>
+                <li><a href="https://Ecorujoe.github.io/wdd231/chamber/">Chamber</a></li>
+                <li><a href="https://github.com/Ecorujoe">Github Profile</a></li>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- CONTENT SECTION -->
+        
+
+        <div class="bento-grid">
+            <section class="card">
+                <h2>Course Work</h2>
+                
+                <ul class="link">
+                    <li><a href="hhttps://Ecorujoe.github.io/wdd131-lastyear/">My Personal Portfolio</a></li>
+                    <li><a href="https://Ecorujoe.github.io/wdd131-lastyear/f1racing.html">WDD 131 Website - f1racing</a></li>
+                    <li><a href="https://Ecorujoe.github.io/wdd130/wwr/index.html">WDD 130 Website -Rafting Adventure</a></li>    
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Lagos Nigeria</h2>
+                <div class="image">
+                    <img src="images/Osimiri-ebube-Lagos-Nigeria.jpeg" alt="Lagos Nigeria" width="150">
+                </div>
+                <p>Falomo Bridge Lagos.</p>
+            </section>
+
+            <section class="card large-card">
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <!-- Buttons for filtering -->
+                <div class="courses-type">
+                    <button class="filter-btn" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="CSE">CSE</button>
+                    <button class="filter-btn" data-filter="WDD">WDD</button>
+                </div>
+
+                <!-- Courses to be filtered -->
+                <div class="courses">
+                    
+                </div>
+                <div>
+                    <p>Total Credits: <span id="total-credits"></span></p>
+                </div>
+
+            </section>
+        </div>
+
+
+        
+    </main>
+    <footer>
+        <p id="year">&copy; <span class="highlight">YYYY</span> Osimiri Ebube | Lagos, Nigeria</p>
+        <p id="lastModifiedDate" class="highlight">Last modified: </p>
+    </footer>
 </body>
 </html>
