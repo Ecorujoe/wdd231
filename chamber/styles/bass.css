@@ -1,0 +1,941 @@
+:root {
+    --primary-color: rgb(100, 200, 140);
+    --secondary-color: rgb(23, 53, 53);
+    --accent1-color: rgb(125, 225, 227);
+    --accent2-color: rgb(105, 222, 193);
+    --accent3-color: rgb(12, 22, 21);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+/*----------- HEADER --------------*/
+
+header {
+    background: white;
+    display: grid;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(12, 22, 21, 0.4);
+    position: fixed;  /* Fix header position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure it stays above content */
+    padding: 0;
+}
+
+.image-logo img {
+    width: 9rem; /* Adjust logo size */
+    margin: .1em 1em;
+}
+
+
+
+
+/*----------- NAVIGATION --------------*/
+
+nav {
+    background-color: rgb(23, 53, 53); /* Dark background for nav */
+    font-size: 1rem; /* Font size for navigation */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    justify-content: center; /* Center nav items */
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(100, 200, 140); /* Text color for links */
+    font-weight: 500;
+    margin: 0 1rem; /* Margin between links */
+    padding: 1.4rem 1rem; /* Padding around links */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition effects */
+}
+
+nav a:hover {
+    color: white; /* Change text color on hover */
+}
+
+nav a.active-menu-link {
+    text-decoration: underline; /* Underline for active link */
+    text-underline-offset: 5px; /* Offset for underline */
+    text-decoration-thickness: 1px; /* Thickness for underline */
+}
+
+
+/*----------- HAMBURGER MENU --------------*/
+
+#menubutton {
+    font-size: 2rem;
+    background: none;
+    cursor: pointer;
+    font-family: "Montserrat";
+    width: 100%;
+    text-align: right;
+    font-weight: 300;
+    border: 0;
+    color: rgb(23, 53, 53); /* Color for hamburger button */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: .25rem 2vw;
+}
+
+#menubutton::before {
+    content: "\2630"; /* Hamburger icon */
+}
+
+#menubutton.open::before {
+    content: "X"; /* Close icon when open */
+    font-weight: 600;
+}
+
+@media (max-width: 999px) {
+    nav ul {
+        display: none; /* Hide nav items on mobile */
+    }
+
+    nav.open ul {
+        display: flex; /* Show nav items when nav is open */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        width: 100%; /* Full width */
+    }
+
+    #menubutton {
+        display: block; /* Show hamburger button */
+    }
+}
+
+@media (min-width: 999px) {
+    #menubutton {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+}
+
+
+
+
+/*----------- HERO SECTION FOR MOBILE --------------*/
+
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 20px
+    }
+
+    .hero-text {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 2em;
+        padding-top: 2em;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: left;
+        margin: 2em;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 20px 0;
+        color: rgb(23, 53, 53);
+    }
+    
+    p {
+        font-size: .9rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #27ae60;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+
+
+
+/*----------- WEATHER CARD --------------*/
+
+.main-container {
+    background-color: #f0f4f8;
+    padding: 2em 0;
+}
+
+
+h1 {
+    margin: 1em .8em;
+    color: rgb(23, 53, 53);
+    font-size: 1.8rem;
+}
+
+.weather-container {
+    width: 100%;
+}
+
+
+.card-events {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgb(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    margin: 2em 1em;
+}
+
+.card-events h2 {
+    background-color: rgb(23, 53, 53);
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.card-events h3 {
+    color: rgb(23, 53, 53);
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+}
+
+.card-events p {
+    color: rgb(23, 53, 53);
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+}
+
+
+.card-weather {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgb(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    margin: 2em 1em;
+}
+
+.card-weather h2 {
+    background-color: rgb(23, 53, 53);
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.card-weather h3 {
+    color: rgb(23, 53, 53);
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+}
+
+.card-weather #description {
+    text-transform: capitalize;
+    color: rgb(23, 53, 53);
+    margin: .3rem 0;
+}
+
+.card-weather #temperature {
+    font-size: 2rem;
+    color: rgb(23, 53, 53);
+    margin: .3rem 0;
+}
+
+
+
+/*----------- FORECAST CARD --------------*/
+
+
+.card-forecast {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgb(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    margin: 2em 1em;
+}
+
+.card-forecast h2 {
+    background-color: rgb(23, 53, 53);
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.card-forecast h3 {
+    color: rgb(23, 53, 53);
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+}
+
+.card-forecast p {
+    text-transform: capitalize;
+    color: rgb(23, 53, 53);
+    margin: 1rem 0;
+}
+
+.card-forecast #forecast-temp {
+    font-size: 2rem;
+    color: rgb(23, 53, 53);
+    margin: .3rem 0;
+}
+
+/*----------- DIRECTORY CARDS --------------*/
+
+#directory-container {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 4em 0 1em 0;
+    color: rgb(23, 53, 53);
+}
+
+.menu {
+    display: none;
+}
+
+.header-separator {
+    display: none;
+}
+
+.member-card {
+    border: 1px solid var(--accent2-color);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: white;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.member-card img {
+    display: block;
+    margin-bottom: 1rem;
+    width: 90px;
+}
+
+.member-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.member-card p {
+    margin: .8rem 0;
+}
+
+
+
+/*----------- SPOTLIGHT SECTION (MOBILE) --------------*/
+
+#spotlight-container {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.spotlight-div h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(23, 53, 53);
+    font-size: 2.4rem;
+    margin: 2em 0 0 0;
+}
+
+.spotlight-card {
+    border: 1px solid var(--accent2-color);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.spotlight-card img {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 80px;
+}
+
+.spotlight-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card p {
+    margin: 0.6rem 0;
+    font-size: 0.9rem;
+}
+
+/* Hide the hr for cleaner layout on mobile */
+.header-separator {
+    display: none;
+}
+
+
+
+/*----------- FORM --------------*/
+
+
+.form-container {
+    max-width: 90%;
+    margin: 2em auto;
+    border: 1px solid var(--primary-color);
+    color: rgb(100, 200, 140);
+    padding: 2em 2em;
+    border-radius: 45px;
+    box-shadow: 4px 4px 8px rgb(23, 53, 53, 0.3);
+}
+
+
+
+.designOne {
+    margin: 2em auto;
+}
+  
+  form {
+      margin: 1rem 50%;
+  }
+    
+      label {
+        display: block;
+        font-size: .8rem;
+        color: rgb(23, 53, 53);
+        padding-top: .2rem;
+      }
+
+      h3 {
+        font-size: .9rem;
+        color: rgb(23, 53, 53);
+        margin: 1.5rem 0 .2rem 0;
+      }
+    
+      input[type=text],
+      input[type=tel],
+      input[type=date],
+      input[type=email],
+      textarea[name=description],
+      select {
+        display: block;
+        margin: .1rem 0 1rem 0 ;
+        padding: .6rem;
+        border: 1px solid #999;
+        border-radius: 4px;
+        border-left-width: 5px;
+        border-left-color:#555;
+        font-size: 1rem;
+        color: #3D405B;
+        width: 100%;
+      }
+    
+      input:required {border-left-color: #ec6060;}
+      input:focus {border-left-color: rgb(23, 53, 53); outline:none;}
+      input:required:valid{border-left-color: rgb(100, 200, 140);}
+    
+      input[type=submit] {
+        border: none;
+        text-align: center;
+        background-color: rgb(100, 200, 140);
+        color: rgb(23, 53, 53);
+        padding: .75rem 1.5rem;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      input[type=submit]:hover {
+        background-color: rgb(23, 53, 53);
+        color: white;
+        cursor: pointer;
+      }
+
+
+    input:-webkit-autofill {
+      -webkit-text-fill-color: #999;
+    }
+    
+    #results {
+      background-color: #F4F1DE;
+      padding: 0 1rem;
+      border: 1px solid rgb(23, 53, 53);
+      border-radius: 6px;
+      width: 80%;
+      margin: 2em auto;
+    }
+
+    .application-title {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 2em auto 1em auto;
+        color: rgb(23, 53, 53);
+    }
+
+    .application-submitted {
+        width: 80%;
+        margin: 4em auto 0 auto;
+    }
+
+    #results h3 {
+        margin: 1em;
+    }
+
+    #results p {
+        margin: 0 1em .5em 1em;
+    }
+
+/* Membership level cards */
+
+    .membership-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        margin: 2em auto;
+        max-width: 90%;
+    }
+    
+    .membership-card {
+        background-color: rgba(100, 200, 140, 0.2);
+        border: 1px solid var(--secondary-color);
+        border-radius: 20px;
+        padding: 1em;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .membership-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .membership-card p {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+        margin: .4em 0;
+    }
+    
+    button {
+        background-color: var(--secondary-color);
+        border: none;
+        padding: 1em 2em;
+        color: white;
+        font-size: .8rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    button:hover {
+        color: var(--primary-color);
+    }
+    
+    /* Modal Styles */
+    .modal {
+        border: 1px solid var(--secondary-color);
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 400px;
+        margin: 4em 2em;
+    }
+
+    .modal h3 {
+        margin: 1em 0;
+    }
+
+    .modal p {
+        font-size: .9rem;
+    }
+
+    
+/* JOIN LAYOUT */
+
+
+.join-layout h2 {
+    text-align: center;
+    margin-bottom: 0;
+    color: rgb(71, 142, 100);
+    font-size: 1.6rem;
+}
+
+
+
+/*----------- FOOTER --------------*/
+
+.footer {
+    background: linear-gradient(to top, rgb(12, 22, 21), rgb(23, 53, 53));
+    color: white;
+    padding: 40px 0 0;
+}
+
+.footer-logo img {
+    width: 6rem;
+}
+
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.footer-section {
+    margin: 0 40px 0 80px;
+}
+
+.footer-section h4 {
+    font-size: .8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0 0 20px;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #64c88c;
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 2em; /* Space between icons */
+    padding: 0;
+    list-style: none;
+}
+
+.social-links li {
+    display: inline-block; /* Align social links horizontally */
+}
+
+.social-links li a {
+    font-size: 1.4rem;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #64c88c;
+}
+
+.footer-separator {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid rgba(105, 222, 193, 0.5);
+    margin: 0 0 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10em;
+    width: 55%;
+    margin-top: 0;
+    font-size: .8rem;
+    color: #989898;
+    letter-spacing: 1px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.highlight {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: .8rem;
+    color: #989898;
+}
+
+footer p {
+    width: 100%;
+    justify-content: center;
+    color: #898989;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .footer-bottom p {
+        margin: 0 0 10px;
+    }
+}
+
+
+/*----------- DISCOVERY PAGE --------------*/
+
+
+/* Overlay full screen */
+.overlay {
+    position: fixed; 
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* On top of other elements */
+}
+
+/* Content of the overlay */
+.overlay-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 4em;
+    background-color: #fff;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: .1em;
+    right: 15px;
+    font-size: 4rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.overlay-message {
+    font-size: 1.2em;
+    margin: 2em auto;
+}
+
+
+/* SIDEBAR CARDS */
+
+
+
+.discovery-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f4f8;
+    padding: 2em 0;
+    
+}
+
+
+
+h1 {
+    margin: 1em 0; /* Remove auto centering */
+    padding-left: 0; /* Ensure no extra padding */
+    color: rgb(23, 53, 53);
+    font-size: 1.8rem;
+    text-align: left; /* Align text to the left */
+}
+
+.discovery-cards-container {
+    width: 100%;
+    margin: 10em auto 4em auto;
+}
+
+.discovery-cards-container h1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.discovery-events {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgba(100, 200, 140, 0.4); /* Fix rgba color format */
+    border-radius: 10px;
+    text-align: left;
+    width: 80%;
+    height: 200px;
+    margin: 2em auto;
+}
+
+.discovery-events h2 {
+    background-color: rgb(23, 53, 53);
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em .6em;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.discovery-events h3 {
+    margin: 1em;
+    font-size: 1.2rem;
+    color: rgb(23, 53, 53);
+}
+
+.discovery-events p {
+    margin: .5em 1.4em;
+    color: rgb(23, 53, 53);
+}
+
+.discovery-webinars {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgba(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: left;
+    width: 80%;
+    height: auto;
+    margin: 2em auto;
+    padding-bottom: 2em;
+}
+
+.discovery-webinars h2 {
+    background-color: rgb(23, 53, 53);
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.discovery-webinars h3 {
+    margin: 1em;
+    font-size: 1.2rem;
+    color: rgb(23, 53, 53);
+}
+
+.discovery-webinars p {
+    margin: .5em 1.4em;
+    color: rgb(23, 53, 53);
+}
+
+.discovery-statistics {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgba(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: left;
+    width: 80%;
+    height: auto;
+    margin: 2em auto;
+    padding-bottom: 2em;
+}
+
+.discovery-statistics h2 {
+    background-color: rgb(23, 53, 53);
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em .6em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.discovery-statistics h3 {
+    margin: 1em;
+    font-size: 1.2rem;
+    color: rgb(23, 53, 53);
+}
+
+.discovery-statistics p {
+    margin: .5em 1.4em;
+    color: rgb(23, 53, 53);
+}
+
+
+/*----------- PHOTOS DISCOVERY SECTION (LARGE SCREENS) --------------*/
+
+/* Photos Section */
+.photos-div {
+    padding: 2em;
+    margin: 4em auto;
+}
+
+#photos-container {
+    display: grid;
+    
+    gap: 1rem;
+    margin-top: 2em;
+}
+
+#photos-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#photos-container img:hover {
+    transform: scale(1.05); /* Slightly zoom the image on hover */
+}

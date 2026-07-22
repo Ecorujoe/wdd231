@@ -1,0 +1,103 @@
+[
+    {
+        "name": "Microsoft Corporation",
+        "address": "Glover Road, Lagos state",
+        "phone_number": "+234 14621100",
+        "website_url": "https://www.microsoft.com",
+        "image":"microsoft_logo.png",
+        "membership_level": 3,
+        "email": "contact@microsoft.com",
+        "services": ["Software Development", "Cloud Services", "AI Solutions"],
+        "founded": 1975
+      },
+      {
+        "name": "Zenith Bank PLC",
+        "address": "Plot 84, Ajose Adeogun Street, Victoria Island, Lagos",
+        "phone_number": "+23412787000",
+        "website_url": "https://www.zenithbank.com",
+        "image": "zenith-logo.png",
+        "membership_level": 3,
+        "email": "zenithdirect@zenithbank.com",
+        "services": ["Banking & Finanacial Services"],
+        "founded": 1990,
+        "employees": 10245,
+        "Local_offices": 390
+    },
+      {
+        "name": "Dangote Group",
+        "address": "1, Alfred Rewane Road, Ikoyi, Lagos",
+        "phone_number": "+234 1 448 0815",
+        "website_url": "https://www.dangote.com",
+        "image": "dangote-logo.png",
+        "membership_level": 3,
+        "email": "dangote.ltd@dangote-group.com",
+        "services": ["Agricultural products", "Real Estate", "Oil and Gas", "Cement Production"],
+        "founded": 1981
+      },
+      {
+        "name": "Mtn Nigeria",
+        "address": "4, Akiode Street, Ikeja, Lagos",
+        "phone_number": "+234801021700",
+        "website_url": "https://www.mtn.com",
+        "image": "mtn-logo.svg",
+        "membership_level": 2,
+        "email": "MTNBroadband.NG@mtn.com",
+        "services": ["Telecommunications"],
+        "founded": 2000
+      },
+      {
+        "name": "Spar Market Ikoyi",
+        "address": "Awolowo road,Ikoyi, Lagos",
+        "phone_number": "+2347066466873",
+        "website_url": "https://www.sparnigeria.com",
+        "image": "SPAR-logo.png",
+        "membership_level": 2,
+        "email": "info@sparnigeria.com",
+        "services": ["Retail, Supermarket"],
+        "founded": 2009
+    },
+    {
+        "name": "First Bank of Nigeria",
+        "address": "35, Marina Street, Lagos Island, Lagos",
+        "phone_number": "+234 12835000",
+        "website_url": "https://www.firstbanknigeria.com",
+        "image": "First-Bank.svg",
+        "membership_level": 2,
+        "email": "firstcontact@firstbanknigeria.com",
+        "services": ["Banking & Finanacial Services"],
+        "founded": 1894
+    },
+    {
+        "name": "Jumia Nigeria",
+        "address": "15, Ilupeju Bypass, Ilupeju, Lagos",
+        "phone_number": "+234 1 888 0000",
+        "website_url": "https://www.jumia.com.ng",
+        "image": "jumia.png",
+        "membership_level": 1,
+        "email": "jumia.nigeria@gmail.com",
+        "services": ["E-commerce"],
+        "founded": 2012
+    },
+    {
+        "name": "Nigerian Breweries PLC",
+        "address": "1, Abebe Road, Iganmu, Lagos",
+        "phone_number": "+234 1 583 9000",
+        "website_url": "https://www.nbplc.com",
+        "image": "nigerian-breweries-plc.svg",
+        "membership_level": 2,
+        "email": "nbplc@heineken.com",
+        "services": ["Manufacturing & Beverages"],
+        "founded": 1946
+      },
+    {
+        "name": "Chicken Republic",
+        "address": "21, Awolowo Road, Ikoyi, Lagos",
+        "phone_number": "+234 1 740 9090",
+        "website_url": "https://www.chickenrepublic.com",
+        "image": "chicken-republic.png",
+        "membership_level": 1,
+        "email": "",
+        "services": ""
+    }
+  ]
+  

@@ -1,0 +1,40 @@
+{
+    "photos": [
+      {
+        "name": "Blue Line Marina",
+        "image": "blue-line-marina.jpeg",
+        "caption": "A view of Blue Line Train station in Marina Lagos."
+      },
+      {
+        "name": "Seneca College",
+        "image": "photo-seneca-college.webp",
+        "caption": "The main campus of Seneca College in Toronto."
+      },
+      {
+        "name": "Tim Hortons",
+        "image": "photo-tim-hortons.webp",
+        "caption": "A popular Tim Hortons café in Canada."
+      },
+      {
+        "name": "Chamber Meetup",
+        "image": "photo-chamber-meetup.webp",
+        "caption": "Business professionals networking at a chamber meetup."
+      },
+      {
+        "name": "Toronto Architectural Glass Inc.",
+        "image": "photo-toronto-architectural-glass-inc.webp",
+        "caption": "Innovative glasswork by Toronto Architectural Glass Inc."
+      },
+      {
+        "name": "Toronto Metropolitan University",
+        "image": "photo-toronto-metropolitan-university.webp",
+        "caption": "The urban campus of Toronto Metropolitan University."
+      },
+      {
+        "name": "CN Tower",
+        "image": "photo-cn-tower.webp",
+        "caption": "The iconic CN Tower in Toronto."
+      }
+    ]
+  }
+  

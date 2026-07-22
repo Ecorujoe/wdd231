@@ -1,0 +1,33 @@
+:root {
+    --primary-color: rgb(100, 200, 140);
+    --secondary-color: rgb(23, 53, 53);
+    --accent1-color: rgb(125, 225, 227);
+    --accent2-color: rgb(105, 222, 193);
+    --accent3-color: rgb(12, 22, 21);
+}
+
+
+.card-weather {
+    border: 1px solid rgb(12, 22, 21);
+    background-color: rgb(100, 200, 140);
+    border-radius: 10px;
+    text-align: center;
+    width: 25%;
+}
+
+.card-weather h2 {
+    color: rgb(23, 53, 53);
+    margin: .3rem 0;
+}
+
+.card-weather #description {
+    text-transform: capitalize;
+    color: rgb(23, 53, 53);
+    margin: .3rem 0;
+}
+
+.card-weather #temperature {
+    font-size: 2rem;
+    color: rgb(23, 53, 53);
+    margin: .3rem 0;
+}
