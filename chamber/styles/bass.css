@@ -192,19 +192,12 @@ nav a.active-menu-link {
 }
 
 
-/////h1 {
-    margin: 1em .8em;
+h1 {
     color: rgb(23, 53, 53);
     font-size: 1.8rem;
     text-align: center;
     font-size: 2rem;
     margin: 4em 0 1em 0;
-    color: rgb(23, 53, 53);
-    margin: 1em 0; /* Remove auto centering */
-    padding-left: 0; /* Ensure no extra padding */
-    color: rgb(23, 53, 53);
-    font-size: 1.8rem;
-    text-align: left; /* Align text to the left */
 }
 
 .weather-container {
