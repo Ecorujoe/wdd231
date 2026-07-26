@@ -192,10 +192,19 @@ nav a.active-menu-link {
 }
 
 
-h1 {
+/////h1 {
     margin: 1em .8em;
     color: rgb(23, 53, 53);
     font-size: 1.8rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 4em 0 1em 0;
+    color: rgb(23, 53, 53);
+    margin: 1em 0; /* Remove auto centering */
+    padding-left: 0; /* Ensure no extra padding */
+    color: rgb(23, 53, 53);
+    font-size: 1.8rem;
+    text-align: left; /* Align text to the left */
 }
 
 .weather-container {
@@ -316,14 +325,6 @@ h1 {
 #directory-container {
     width: 100%;
 }
-
-h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 4em 0 1em 0;
-    color: rgb(23, 53, 53);
-}
-
 .menu {
     display: none;
 }
@@ -794,16 +795,6 @@ footer p {
     background-color: #f0f4f8;
     padding: 2em 0;
     
-}
-
-
-
-h1 {
-    margin: 1em 0; /* Remove auto centering */
-    padding-left: 0; /* Ensure no extra padding */
-    color: rgb(23, 53, 53);
-    font-size: 1.8rem;
-    text-align: left; /* Align text to the left */
 }
 
 .discovery-cards-container {
