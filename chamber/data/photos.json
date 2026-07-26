@@ -6,34 +6,34 @@
         "caption": "A view of Blue Line Train station in Marina Lagos."
       },
       {
-        "name": "Seneca College",
-        "image": "photo-seneca-college.webp",
-        "caption": "The main campus of Seneca College in Toronto."
+        "name": "University of Lagos",
+        "image": "unilag.jpg",
+        "caption": "The main University in the city of Lagos."
       },
       {
-        "name": "Tim Hortons",
-        "image": "photo-tim-hortons.webp",
-        "caption": "A popular Tim Hortons café in Canada."
+        "name": "Tafawa Balewa Square",
+        "image": "t-b-s.jpg",
+        "caption": "A historic landmark for cultural and civic events."
       },
       {
-        "name": "Chamber Meetup",
-        "image": "photo-chamber-meetup.webp",
-        "caption": "Business professionals networking at a chamber meetup."
+        "name": "Nike Art Gallery",
+        "image": "nike-art-gallery.webp",
+        "caption": "Business professionals networking at in Nike art Gallery."
       },
       {
-        "name": "Toronto Architectural Glass Inc.",
-        "image": "photo-toronto-architectural-glass-inc.webp",
-        "caption": "Innovative glasswork by Toronto Architectural Glass Inc."
+        "name": "Dangote Refinery",
+        "image": "dangote_refinery_.jpg",
+        "caption": "Dangote refinery the bigest in Lagos Nigeria."
       },
       {
-        "name": "Toronto Metropolitan University",
-        "image": "photo-toronto-metropolitan-university.webp",
-        "caption": "The urban campus of Toronto Metropolitan University."
+        "name": "Lekki Conservation Centre",
+        "image": "lekki-conservation-center.jpg",
+        "caption": "Lekki Conservation Centre is a nature reserve managed by the Nigerian Conservation Foundation, offering a serene escape from urban chaos. ."
       },
       {
-        "name": "CN Tower",
-        "image": "photo-cn-tower.webp",
-        "caption": "The iconic CN Tower in Toronto."
+        "name": "Lagos Continental",
+        "image": "lagos-continental2.jpg",
+        "caption": " Lagos Continental Hotel is the tallest hotel in West Africa"
       }
     ]
   }

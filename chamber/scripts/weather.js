@@ -4,12 +4,12 @@ const weatherIcon = document.querySelector('#weather-icon');
 const weatherDesc = document.querySelector('#description');
 const weatherTemp = document.querySelector('#temperature');
 
-// Create required variables for the URL
+// Create required variables for the URL - VICTORIA ISLAND, LAGOS, NIGERIA COORDINATES
 const myKey = "944ba44088bb0cafb9c93585c28ba580";
-const myLat = "43.65";
-const myLong = "-79.40";
+const myLat = "6.4281";   // Victoria Island latitude
+const myLong = "3.4219";  // Victoria Island longitude
 
-// Full path using template API URL with coordinates for Toronto, Canada
+// Full path using template API URL with coordinates for Victoria Island, Lagos
 const url = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
 
 // To grab the current weather data
@@ -18,7 +18,7 @@ async function apiFetch() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            displayResults(data); // uncomment when ready
+            displayResults(data);
         } else {
             throw Error(await response.text());
         }
@@ -31,7 +31,7 @@ async function apiFetch() {
 function displayResults(data) {
     weatherLocal.innerHTML = data.name;
     weatherDesc.innerHTML = data.weather[0].description;
-    weatherTemp.innerHTML = `${Math.round(data.main.temp)}&deg;C`; // Round temperature to whole number
+    weatherTemp.innerHTML = `${Math.round(data.main.temp)}&deg;C`;
     const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('SRC', iconsrc);
     weatherIcon.setAttribute('alt', data.weather[0].description);
@@ -47,7 +47,7 @@ const forecastTempAfter = document.querySelector('#forecast-temp-after');
 const dayNameNext = document.querySelector('#day-name-next');
 const dayNameAfter = document.querySelector('#day-name-after');
 
-// Forecast API URL
+// Forecast API URL - Using Victoria Island coordinates
 const forecastUrl = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
 
 // Fetch weather forecast data
@@ -56,7 +56,7 @@ async function fetchForecast() {
         const response = await fetch(forecastUrl);
         if (response.ok) {
             const data = await response.json();
-            displayForecast(data); // Call function to display data
+            displayForecast(data);
         } else {
             throw Error(await response.text());
         }
@@ -74,9 +74,9 @@ function getDayName(date) {
 // DISPLAY FORECAST DATA ONTO THE WEB PAGE
 function displayForecast(data) {
     // Extract forecast data for 3-hour intervals (current and future days)
-    const todayForecast = data.list[0]; // First item for today
-    const nextDayForecast = data.list[8]; // Roughly 24 hours later
-    const dayAfterNextForecast = data.list[16]; // Roughly 48 hours later
+    const todayForecast = data.list[0];
+    const nextDayForecast = data.list[8];
+    const dayAfterNextForecast = data.list[16];
     
     // Display town name
     forecastTown.innerHTML = data.city.name;
@@ -85,15 +85,15 @@ function displayForecast(data) {
     forecastTempToday.innerHTML = `${Math.round(todayForecast.main.temp)}&deg;C`;
 
     // Calculate and display the day names for the next two days
-    const today = new Date(); // Get current date
+    const today = new Date();
     const nextDay = new Date(today);
-    nextDay.setDate(today.getDate() + 1); // Calculate the next day
+    nextDay.setDate(today.getDate() + 1);
     const dayAfterNext = new Date(today);
-    dayAfterNext.setDate(today.getDate() + 2); // Calculate the day after the next
+    dayAfterNext.setDate(today.getDate() + 2);
 
     // Update day names for tomorrow and the day after tomorrow
-    dayNameNext.innerHTML = `${getDayName(nextDay)}: ${Math.round(nextDayForecast.main.temp)}&deg;C`; // Combined output
-    dayNameAfter.innerHTML = `${getDayName(dayAfterNext)}: ${Math.round(dayAfterNextForecast.main.temp)}&deg;C`; // Combined output
+    dayNameNext.innerHTML = `${getDayName(nextDay)}: ${Math.round(nextDayForecast.main.temp)}&deg;C`;
+    dayNameAfter.innerHTML = `${getDayName(dayAfterNext)}: ${Math.round(dayAfterNextForecast.main.temp)}&deg;C`;
 
     // Display forecast temperatures for the next two days (rounded to whole number)
     forecastTempNext.innerHTML = `${Math.round(nextDayForecast.main.temp)}&deg;C`;
