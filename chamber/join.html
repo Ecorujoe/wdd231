@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join |Osimiri Chamber of Commerce</title>
+    <meta name="description" content="This website will serve as a resource hub for businesses in the city of Lagos.">
+    <meta name="author" content="Osimiri EbubeChukwu Joel">
+    <link rel="stylesheet" href="styles/bass.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="Osimiri Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://Ecorujoe.github.io/wdd231/chamber/">
+    <meta property="og:url" content="https://Ecorujoe.github.io/wdd231/chamber/">
+    <meta property="og:descripiton" content="Osimiri of Commerce provide information on local events, host networking opportunities, create business directories, and encourage local shopping.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+    <script defer src="scripts/modal.js"></script>
+    <script defer src="scripts/forms.js"></script>
+    <script defer src="scripts/scrollanimation.js"></script>
+</head>
+<body>
+    <header>
+
+        <!-- NAVIGATION -->
+        
+        <div class="header">
+            <div class="image-logo">
+                <a href=""><img src="images/logo-osimiri.jpeg" alt="logo osimiri chamber" width="50"></a>
+            </div>
+            <!-- Hamburger menu button -->
+            <button id="menubutton" aria-label="menu"></button>
+        </div>
+
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="https://Ecorujoe.github.io/wdd231/chamber/">Home</a></li>
+                <li><a href="https://Ecorujoe.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                <li><a href="https://Ecorujoe.github.io/wdd231/chamber/join.html" class="active-menu-link">Join</a></li>
+                <li><a href="https://Ecorujoe.github.io/wdd231/chamber/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+
+
+    <main>
+        <h1 class="join-title">Join</h1>
+        <div class="join-layout">
+            
+        
+            <div class="form-container">
+            <h2>Membership Application</h2>
+            <form method="GET" action="thankyou.html" class="designOne">
+
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label>Title <input type="text" name="title" required placeholder="ex: Sales Manager" title="Your Title"></label>                  
+                <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Organization <input type="text" name="organization"  title="Your Organization" required autocomplete="organization"></label>
+                <label>Business Description <textarea name="description" title="Your Organization Description"></textarea></label>
+                
+        
+                <h3>Select Membership Level</h3>
+                <label><input type="radio" name="membership" value="NP" checked> NP Membership (Non-profit)</label>
+                <label><input type="radio" name="membership" value="Bronze"> Bronze Membership</label>
+                <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
+                <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
+        
+                
+                <!-- Hidden Timestamp Field -->
+                <input type="hidden" name="timestamp" id="timestamp">
+
+        
+                <input type="submit" value="Become a Member">
+            </form>
+            </div>
+
+            <!-- Membership Cards and Modals -->
+            
+            <div class="membership-container">
+                <h2>Membership Levels</h2>
+                <div class="membership-card np-card">
+                    <p>NP Membership</p>
+                    <button class="openButton" data-modal="npModal">More Information</button>
+                    <dialog id="npModal" class="modal">
+                        <h3>NP Membership Benefits</h3>
+                        <p>Includes access to non-profit community events, limited advertising opportunities, and participation in select chamber events at a discounted rate.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card bronze-card">
+                    <p>Bronze Membership</p>
+                    <button class="openButton" data-modal="bronzeModal">More Information</button>
+                    <dialog id="bronzeModal" class="modal">
+                        <h3>Bronze Membership Benefits</h3>
+                        <p>Includes discounted events, basic advertising in the chamber directory, and invitations to chamber networking events.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card silver-card">
+                    <p>Silver Membership</p>
+                    <button class="openButton" data-modal="silverModal">More Information</button>
+                    <dialog id="silverModal" class="modal">
+                        <h3>Silver Membership Benefits</h3>
+                        <p>Includes premium event access, featured advertising, and a spotlight position on the home page.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card gold-card">
+                    <p>Gold Membership</p>
+                    <button class="openButton" data-modal="goldModal">More Information</button>
+                    <dialog id="goldModal" class="modal">
+                        <h3>Gold Membership Benefits</h3>
+                        <p>Full access to all events, premier advertising, and VIP benefits, including exclusive business opportunities and top-tier spotlight positions.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        
+      </main>
+
+
+
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>ABOUT ME</h4>
+                    <ul>
+                        <li><a href="https://Ecorujoe.github.io/portfolio/#intro">Our Mission</a></li>
+                        <li><a href="https://Ecorujoe.github.io/portfolio/#projects">Projects</a></li>
+                        <li><a href="https://Ecorujoe.github.io/portfolio/#contact-form">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT INFORMATION</h4>
+                    <ul>
+                        <li>Ecorujoe@outlook.com</li>
+                        <li>Victoria Island, Lagos Nigeria</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FOLLOW ME</h4>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/Ecorujoe" aria-label="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/Ecorujoe/" aria-label="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/Ecorujoe/" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Horizontal Line to Separate Sections -->
+            <hr class="footer-separator">
+
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <a href=""><img src="images/logo-osimiri.jpeg" alt="logomarca Osimiri logo" width="50" loading="lazy"></a>
+                </div>
+                <p id="year">&copy; <span class="highlight">YYYY</span> Osimiri EbubeChukwu Joel | Web Designer</p>
+            </div>
+            <p> <span class="highlight"></span> </p>
+            <p id="lastModifiedDate" class="highlight">Last modified: </p>
+        </div>
+        
+    </footer>
+    
+</body>
+</html>
